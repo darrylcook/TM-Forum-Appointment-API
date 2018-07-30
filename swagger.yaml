@@ -2,7 +2,7 @@ swagger: '2.0'
 info:
   description: ''
   version: '1.0'
-  title: Business Service Appointment API
+  title: TM Forum Appointment API
 host: api.orange.com
 basePath: /
 schemes:
