@@ -49,6 +49,42 @@ paths:
         Filtering selection is enabled on all attributes: first level and inner
         classes
       deprecated: false
+      parameters:
+        - name: fields
+          in: query
+          required: false
+          description: For attribute selection
+          type: string
+        - name: serviceArea
+          in: query
+          required: false
+          description: Service Area
+          type: string
+        - name: startDate
+          in: query
+          required: false
+          description: Earliest Appointment Date
+          type: string
+        - name: endDate
+          in: query
+          required: false
+          description: Latest Appointment Date
+          type: string
+        - name: workType
+          in: query
+          required: false
+          description: The type of work
+          type: string
+        - name: category
+          in: query
+          required: false
+          description: Customer category
+          type: string
+        - name: limitList
+          in: query
+          required: false
+          description: limit the number of appointments returned
+          type: string
       responses:
         '200':
           description: Success
@@ -201,6 +237,8 @@ definitions:
           $ref: '#/definitions/CalendarEntryAttachment'
       category:
         type: string
+      serviceArea:
+        type: string
       endDate:
         type: string
         format: date-time
@@ -232,6 +270,10 @@ definitions:
           - Cancelled
           - Validated
           - Initialised
+      WorkRequired:
+        type: array
+        items:
+          $ref: '#/definitions/WorkSpecificationRef'
       relatedParty:
         type: array
         items:
