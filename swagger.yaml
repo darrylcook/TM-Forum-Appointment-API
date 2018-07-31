@@ -92,6 +92,38 @@ paths:
             type: array
             items:
               $ref: '#/definitions/Appointment'
+          examples:
+            application/json:
+              - category: B2C           
+                serviceArea: Guildford
+                endDate: '31.07.2018'
+                alarmAction: 'SMS'
+                creationDate: '1953-04-27T04:54:28.593Z'
+                lastUpdate: '31.07.2018'
+                startDate: '31.07.2018'
+                description: Hertiage to SMETS1 Smart Electricity Install
+                externalId: EXT0001
+                id: 1678687236
+                href: https://api.sse.co.uk/appointment/1678687236
+                status: Scheduled
+                WorkRequired:
+                - workType: SMETS1
+                  workTasks:
+                  - workTask: TASK1
+                relatedParty:
+                - href: https://api.sse.co.uk/relatedParty/1678687236
+                  id: 16578612
+                  role: Customer
+                  name: Mr Proof of Concept
+                address:
+                - id: 12389893
+                  href: https://api.sse.co.uk/address/1678687236
+                note:
+                - author: Darryl Cook
+                  date: '31.07.2018'
+                  text: This is a service order note
+ 
+                  
         '400':
           description: bad_request
           schema:
@@ -118,6 +150,18 @@ paths:
           description: Success
           schema:
             $ref: '#/definitions/Appointment'
+          examples:
+            application/json:
+              - category: B2C           
+                serviceArea: Guildford
+                endDate: '31.07.2018'
+                alarmAction: 'SMS'
+                creationDate: '1953-04-27T04:54:28.593Z'
+                lastUpdate: '31.07.2018'
+                startDate: '31.07.2018'
+                description: Hertiage to SMETS1 Smart Electricity Install
+                externalId: EXT0001
+                id: 1678687236
         '404':
           description: not_found
           schema:
