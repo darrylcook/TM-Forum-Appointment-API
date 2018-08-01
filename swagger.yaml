@@ -124,7 +124,7 @@ paths:
                   name: Mr Proof of Concept 1
                 address:
                 - id: 123456701
-                  href: https://api.sse.co.uk/address/123456701
+                  href: https://api.ccm-dev.sse.co.uk:9022/address/address?addressId=123456701
                 note:
                 - author: Darryl Cook
                   date: '30.07.2018'
