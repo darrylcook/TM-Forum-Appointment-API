@@ -101,7 +101,7 @@ paths:
                 optimisationStatus: Emailed To Customer
                 externalId: 
                 id: SO01
-                href: https://api.sse.co.uk/appointment/SO01
+                href: https://api.ccm-dev.sse.co.uk:9022/appointment/SO01
                 status: Scheduled
                 WorkRequired:
                 - workType: SM33
@@ -118,7 +118,7 @@ paths:
                   - workTask: INSTSM0003
                   - workTask: INIHSM0001
                   relatedParty:
-                - href: https://api.sse.co.uk/relatedParty/CUST01
+                - href: https://api.ccm-dev.sse.co.uk:9022/CustomerManagement/Customer/CUST01
                   id: CUST01
                   role: Customer
                   name: Mr Proof of Concept 1
@@ -145,7 +145,7 @@ paths:
                 optimisationStatus: Emailed To Customer
                 externalId: 
                 id: SO02
-                href: https://api.sse.co.uk/appointment/SO02
+                href: https://api.ccm-dev.sse.co.uk:9022/appointment/SO02
                 status: Scheduled
                 WorkRequired:
                 - workType: SM33
@@ -162,13 +162,13 @@ paths:
                   - workTask: INSTSM0003
                   - workTask: INIHSM0001
                 relatedParty:
-                - href: https://api.sse.co.uk/relatedParty/CUST02
+                - href: https://api.ccm-dev.sse.co.uk:9022/CustomerManagement/Customer/CUST02
                   id: CUST02
                   role: Customer
                   name: Mr Proof of Concept 2
                 address:
                 - id: 123456702
-                  href: https://api.sse.co.uk/address/123456702
+                  href: https://api.ccm-dev.sse.co.uk:9022/address/123456702
                 note:
                 - author: Darryl Cook
                   date: '31.07.2018'
@@ -213,7 +213,7 @@ paths:
                 optimisationStatus: Emailed To Customer
                 externalId: 
                 id: SO01
-                href: https://api.sse.co.uk/appointment/SO01
+                href: https://api.ccm-dev.sse.co.uk:9022/appointment/SO01
                 status: Scheduled
                 WorkRequired:
                 - workType: SM33
@@ -230,13 +230,13 @@ paths:
                   - workTask: INSTSM0003
                   - workTask: INIHSM0001
                   relatedParty:
-                - href: https://api.sse.co.uk/relatedParty/CUST01
+                - href: https://api.ccm-dev.sse.co.uk:9022/CustomerManagement/Customer/CUST01
                   id: CUST01
                   role: Customer
                   name: Mr Proof of Concept 1
                 address:
                 - id: 123456701
-                  href: https://api.sse.co.uk/address/123456701
+                  href: https://api.ccm-dev.sse.co.uk:9022/address/123456701
                 note:
                 - author: Darryl Cook
                   date: '30.07.2018'
