@@ -104,14 +104,14 @@ paths:
                 description: Hertiage to SMETS1 Smart Electricity Install
                 externalId: EXT01
                 id: SO01
-                href: https://api.sse.co.uk/appointment/1678687236
+                href: https://api.sse.co.uk/appointment/SO01
                 status: Scheduled
                 WorkRequired:
                 - workType: SMETS1
                   workTasks:
                   - workTask: TASK1
                 relatedParty:
-                - href: https://api.sse.co.uk/relatedParty/1678687236
+                - href: https://api.sse.co.uk/relatedParty/CUST01
                   id: 16578612
                   role: Customer
                   name: Mr Proof of Concept 1
@@ -136,14 +136,14 @@ paths:
                 description: Hertiage to SMETS1 Smart Electricity Install
                 externalId: EXT02
                 id: SO02
-                href: https://api.sse.co.uk/appointment/1678687236
+                href: https://api.sse.co.uk/appointment/SO02
                 status: Scheduled
                 WorkRequired:
                 - workType: SMETS1
                   workTasks:
                   - workTask: TASK1
                 relatedParty:
-                - href: https://api.sse.co.uk/relatedParty/1678687236
+                - href: https://api.sse.co.uk/relatedParty/CUST02
                   id: 16578612
                   role: Customer
                   name: Mr Proof of Concept 2
