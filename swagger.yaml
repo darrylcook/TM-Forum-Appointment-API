@@ -75,11 +75,6 @@ paths:
           required: false
           description: The type of work
           type: string
-        - name: category
-          in: query
-          required: false
-          description: Customer category
-          type: string
         - name: limitList
           in: query
           required: false
@@ -94,23 +89,35 @@ paths:
               $ref: '#/definitions/Appointment'
           examples:
             application/json:
-              - category: B2C           
-                serviceArea: Guildford
-                endDate: '31.07.2018'
-                alarmAction: 'SMS'
-                creationDate: '1953-04-27T04:54:28.593Z'
+              - category: Change Meter           
+                serviceAreaId: 910007000
+                endDate: '2018-07-31T13:00:00.000Z'
+                alarm: false
+                alarmAction: 
+                creationDate: '2018-04-27T04:54:28.593Z'
                 lastUpdate: '31.07.2018'
-                startDate: '31.07.2018'
-                description: Hertiage to SMETS1 Smart Electricity Install
-                externalId: EXT01
+                startDate: '2018-07-31T08:00:00.000Z'
+                description: SM Change Mtr Dumb to Smart
+                optimisationStatus: Emailed To Customer
+                externalId: 
                 id: SO01
                 href: https://api.sse.co.uk/appointment/SO01
                 status: Scheduled
                 WorkRequired:
-                - workType: SMETS1
+                - workType: SM33
                   workTasks:
-                  - workTask: TASK1
-                relatedParty:
+                  - workTask: WORKSM0001
+                  - workTask: OFFRTOCUST
+                  - workTask: COMMSM0004
+                  - workTask: COMMSM0002
+                  - workTask: READSM0001
+                  - workTask: CHARSM0001
+                  - workTask: REMOSM0001
+                  - workTask: CHECSM0001
+                  - workTask: RESESM0001
+                  - workTask: INSTSM0003
+                  - workTask: INIHSM0001
+                  relatedParty:
                 - href: https://api.sse.co.uk/relatedParty/CUST01
                   id: CUST01
                   role: Customer
@@ -126,22 +133,34 @@ paths:
                   date: '31.07.2018'
                   text: This is a service order 2 note for Job 2
  
-              - category: B2C           
-                serviceArea: Guildford
-                endDate: '31.07.2018'
-                alarmAction: 'SMS'
-                creationDate: '1953-04-27T04:54:28.593Z'
+              - category: Change Meter           
+                serviceAreaId: 910007000
+                endDate: '2018-07-31T13:00:00.000Z'
+                alarm: false
+                alarmAction: 
+                creationDate: '2018-04-27T04:54:28.593Z'
                 lastUpdate: '31.07.2018'
-                startDate: '31.07.2018'
-                description: Hertiage to SMETS1 Smart Electricity Install
-                externalId: EXT02
+                startDate: '2018-07-31T08:00:00.000Z'
+                description: SM Change Mtr Dumb to Smart
+                optimisationStatus: Emailed To Customer
+                externalId: 
                 id: SO02
                 href: https://api.sse.co.uk/appointment/SO02
                 status: Scheduled
                 WorkRequired:
-                - workType: SMETS1
+                - workType: SM33
                   workTasks:
-                  - workTask: TASK1
+                  - workTask: WORKSM0001
+                  - workTask: OFFRTOCUST
+                  - workTask: COMMSM0004
+                  - workTask: COMMSM0002
+                  - workTask: READSM0001
+                  - workTask: CHARSM0001
+                  - workTask: REMOSM0001
+                  - workTask: CHECSM0001
+                  - workTask: RESESM0001
+                  - workTask: INSTSM0003
+                  - workTask: INIHSM0001
                 relatedParty:
                 - href: https://api.sse.co.uk/relatedParty/CUST02
                   id: CUST02
@@ -182,23 +201,35 @@ paths:
             $ref: '#/definitions/Appointment'
           examples:
             application/json:
-              - category: B2C           
-                serviceArea: Guildford
-                endDate: '31.07.2018'
-                alarmAction: 'SMS'
-                creationDate: '1953-04-27T04:54:28.593Z'
+              - category: Change Meter           
+                serviceAreaId: 910007000
+                endDate: '2018-07-31T13:00:00.000Z'
+                alarm: false
+                alarmAction: 
+                creationDate: '2018-04-27T04:54:28.593Z'
                 lastUpdate: '31.07.2018'
-                startDate: '31.07.2018'
-                description: Hertiage to SMETS1 Smart Electricity Install
-                externalId: EXT01
+                startDate: '2018-07-31T08:00:00.000Z'
+                description: SM Change Mtr Dumb to Smart
+                optimisationStatus: Emailed To Customer
+                externalId: 
                 id: SO01
                 href: https://api.sse.co.uk/appointment/SO01
                 status: Scheduled
                 WorkRequired:
-                - workType: SMETS1
+                - workType: SM33
                   workTasks:
-                  - workTask: TASK1
-                relatedParty:
+                  - workTask: WORKSM0001
+                  - workTask: OFFRTOCUST
+                  - workTask: COMMSM0004
+                  - workTask: COMMSM0002
+                  - workTask: READSM0001
+                  - workTask: CHARSM0001
+                  - workTask: REMOSM0001
+                  - workTask: CHECSM0001
+                  - workTask: RESESM0001
+                  - workTask: INSTSM0003
+                  - workTask: INIHSM0001
+                  relatedParty:
                 - href: https://api.sse.co.uk/relatedParty/CUST01
                   id: CUST01
                   role: Customer
@@ -399,6 +430,8 @@ definitions:
         type: string
         format: date-time
       description:
+        type: string
+      optimisationStatus:
         type: string
       externalId:
         type: string
