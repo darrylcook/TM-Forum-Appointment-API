@@ -112,7 +112,7 @@ paths:
                   - workTask: TASK1
                 relatedParty:
                 - href: https://api.sse.co.uk/relatedParty/CUST01
-                  id: 16578612
+                  id: CUST01
                   role: Customer
                   name: Mr Proof of Concept 1
                 address:
@@ -144,7 +144,7 @@ paths:
                   - workTask: TASK1
                 relatedParty:
                 - href: https://api.sse.co.uk/relatedParty/CUST02
-                  id: 16578612
+                  id: CUST02
                   role: Customer
                   name: Mr Proof of Concept 2
                 address:
