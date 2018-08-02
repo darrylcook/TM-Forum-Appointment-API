@@ -93,38 +93,81 @@ paths:
                 serviceAreaId: 910007000
                 endDate: '2018-07-31T13:00:00.000Z'
                 alarm: false
-                alarmAction: 
+                alarmAction: None
                 creationDate: '2018-04-27T04:54:28.593Z'
                 lastUpdate: '31.07.2018'
                 startDate: '2018-07-31T08:00:00.000Z'
                 description: SM Change Mtr Dumb to Smart
                 optimisationStatus: Emailed To Customer
-                externalId: 
+                externalId: EXT01
                 id: SO01
                 href: https://api.ccm-dev.sse.co.uk:9022/appointment/SO01
                 status: Scheduled
                 WorkRequired:
                 - workType: SM33
-                  workTasks:
-                  - workTask: WORKSM0001
-                  - workTask: OFFRTOCUST
-                  - workTask: COMMSM0004
-                  - workTask: COMMSM0002
-                  - workTask: READSM0001
-                  - workTask: CHARSM0001
-                  - workTask: REMOSM0001
-                  - workTask: CHECSM0001
-                  - workTask: RESESM0001
-                  - workTask: INSTSM0003
-                  - workTask: INIHSM0001
-                  relatedParty:
+                  work:
+                  - item: WORKSM0001
+                  - item: OFFRTOCUST
+                  - item: COMMSM0004
+                  - item: COMMSM0002
+                  - item: READSM0001
+                  - item: CHARSM0001
+                  - item: REMOSM0001
+                  - item: CHECSM0001
+                  - item: RESESM0001
+                  - item: INSTSM0003
+                  - item: INIHSM0001
+                relatedParty:
                 - href: https://api.ccm-dev.sse.co.uk:9022/CustomerManagement/Customer/CUST01
                   id: CUST01
                   role: Customer
                   name: Mr Proof of Concept 1
                 address:
-                - id: 123456701
-                  href: https://api.ccm-dev.sse.co.uk:9022/address/address?addressId=123456701
+                  id: "123456701"
+                  href: https://api.ccm-dev.sse.co.uk:9022/address/123456701
+                note:
+                - author: Darryl Cook
+                  date: '30.07.2018'
+                  text: This is a service order 1 note for Job 2
+                - author: Darryl Cook
+                  date: '31.07.2018'
+                  text: This is a service order 2 note for Job 2
+              - category: Change Meter           
+                serviceAreaId: 910007000
+                endDate: '2018-07-31T13:00:00.000Z'
+                alarm: false
+                alarmAction: None
+                creationDate: '2018-04-27T04:54:28.593Z'
+                lastUpdate: '31.07.2018'
+                startDate: '2018-07-31T08:00:00.000Z'
+                description: SM Change Mtr Dumb to Smart
+                optimisationStatus: Emailed To Customer
+                externalId: EXT02
+                id: SO02
+                href: https://api.ccm-dev.sse.co.uk:9022/appointment/SO02
+                status: Scheduled
+                WorkRequired:
+                - workType: SM33
+                  work:
+                  - item: WORKSM0001
+                  - item: OFFRTOCUST
+                  - item: COMMSM0004
+                  - item: COMMSM0002
+                  - item: READSM0001
+                  - item: CHARSM0001
+                  - item: REMOSM0001
+                  - item: CHECSM0001
+                  - item: RESESM0001
+                  - item: INSTSM0003
+                  - item: INIHSM0001
+                relatedParty:
+                - href: https://api.ccm-dev.sse.co.uk:9022/CustomerManagement/Customer/CUST02
+                  id: CUST02
+                  role: Customer
+                  name: Mr Proof of Concept 2
+                address:
+                  id: "123456702"
+                  href: https://api.ccm-dev.sse.co.uk:9022/address/address?addressId=123456702
                 note:
                 - author: Darryl Cook
                   date: '30.07.2018'
@@ -143,36 +186,36 @@ paths:
                 startDate: '2018-07-31T08:00:00.000Z'
                 description: SM Change Mtr Dumb to Smart
                 optimisationStatus: Emailed To Customer
-                externalId: 
-                id: SO02
-                href: https://api.ccm-dev.sse.co.uk:9022/appointment/SO02
+                externalId: EXT03
+                id: SO03
+                href: https://api.ccm-dev.sse.co.uk:9022/appointment/SO03
                 status: Scheduled
                 WorkRequired:
                 - workType: SM33
-                  workTasks:
-                  - workTask: WORKSM0001
-                  - workTask: OFFRTOCUST
-                  - workTask: COMMSM0004
-                  - workTask: COMMSM0002
-                  - workTask: READSM0001
-                  - workTask: CHARSM0001
-                  - workTask: REMOSM0001
-                  - workTask: CHECSM0001
-                  - workTask: RESESM0001
-                  - workTask: INSTSM0003
-                  - workTask: INIHSM0001
+                  work:
+                  - item: WORKSM0001
+                  - item: OFFRTOCUST
+                  - item: COMMSM0004
+                  - item: COMMSM0002
+                  - item: READSM0001
+                  - item: CHARSM0001
+                  - item: REMOSM0001
+                  - item: CHECSM0001
+                  - item: RESESM0001
+                  - item: INSTSM0003
+                  - item: INIHSM0001
                 relatedParty:
-                - href: https://api.ccm-dev.sse.co.uk:9022/CustomerManagement/Customer/CUST02
-                  id: CUST02
+                - href: https://api.ccm-dev.sse.co.uk:9022/CustomerManagement/Customer/CUST03
+                  id: CUST03
                   role: Customer
-                  name: Mr Proof of Concept 2
+                  name: Mr Proof of Concept 3
                 address:
-                - id: 123456702
-                  href: https://api.ccm-dev.sse.co.uk:9022/address/123456702
+                  id: 123456702
+                  href: https://api.ccm-dev.sse.co.uk:9022/address/123456703
                 note:
                 - author: Darryl Cook
                   date: '31.07.2018'
-                  text: This is a service order note for Job 1    
+                  text: This is a service order note for Job 3   
         '400':
           description: bad_request
           schema:
@@ -217,19 +260,19 @@ paths:
                 status: Scheduled
                 WorkRequired:
                 - workType: SM33
-                  workTasks:
-                  - workTask: WORKSM0001
-                  - workTask: OFFRTOCUST
-                  - workTask: COMMSM0004
-                  - workTask: COMMSM0002
-                  - workTask: READSM0001
-                  - workTask: CHARSM0001
-                  - workTask: REMOSM0001
-                  - workTask: CHECSM0001
-                  - workTask: RESESM0001
-                  - workTask: INSTSM0003
-                  - workTask: INIHSM0001
-                  relatedParty:
+                  work:
+                  - item: WORKSM0001
+                  - item: OFFRTOCUST
+                  - item: COMMSM0004
+                  - item: COMMSM0002
+                  - item: READSM0001
+                  - item: CHARSM0001
+                  - item: REMOSM0001
+                  - item: CHECSM0001
+                  - item: RESESM0001
+                  - item: INSTSM0003
+                  - item: INIHSM0001
+                relatedParty:
                 - href: https://api.ccm-dev.sse.co.uk:9022/CustomerManagement/Customer/CUST01
                   id: CUST01
                   role: Customer
@@ -446,10 +489,11 @@ definitions:
           - Cancelled
           - Validated
           - Initialised
+          - Scheduled
       WorkRequired:
         type: array
         items:
-          $ref: '#/definitions/WorkSpecificationRef'
+          $ref: '#/definitions/WorkRequiredRef'
       relatedParty:
         type: array
         items:
@@ -587,24 +631,24 @@ definitions:
       WorkRequired:
         type: array
         items:
-          $ref: '#/definitions/WorkSpecificationRef'
+          $ref: '#/definitions/WorkRequiredRef'
       freeSlot:
         type: array
         items:
           $ref: '#/definitions/FreeSlot'
-  WorkSpecificationRef:
+  WorkRequiredRef:
     type: object
     properties:
       workType:
         type: string
-      workTasks:
+      work:
         type: array
         items:
-          $ref: '#/definitions/WorkTask'
-  WorkTask:
+          $ref: '#/definitions/Work'
+  Work:
     type: object
     properties:
-      workTask:
+      item:
         type: string
   ProductSpecificationRef:
     type: object
