@@ -124,7 +124,7 @@ paths:
                   name: Mr Proof of Concept 1
                 address:
                   id: "123456701"
-                  href: https://api.ccm-dev.sse.co.uk:9022/address/address?addressId=123456701
+                  href: https://api.ccm-dev.sse.co.uk:9022/address/address/123456701
                 note:
                 - author: Darryl Cook
                   date: '30.07.2018'
@@ -167,7 +167,7 @@ paths:
                   name: Mr Proof of Concept 2
                 address:
                   id: "123456702"
-                  href: https://api.ccm-dev.sse.co.uk:9022/address/address?addressId=123456702
+                  href: https://api.ccm-dev.sse.co.uk:9022/address/address/123456702
                 note:
                 - author: Darryl Cook
                   date: '30.07.2018'
@@ -211,7 +211,7 @@ paths:
                   name: Mr Proof of Concept 3
                 address:
                   id: 123456702
-                  href: https://api.ccm-dev.sse.co.uk:9022/address/address?addressId=123456703
+                  href: https://api.ccm-dev.sse.co.uk:9022/address/address/123456703
                 note:
                 - author: Darryl Cook
                   date: '31.07.2018'
@@ -279,7 +279,7 @@ paths:
                   name: Mr Proof of Concept 1
                 address:
                 - id: 123456701
-                  href: https://api.ccm-dev.sse.co.uk:9022/address/address?addressId=123456701
+                  href: https://api.ccm-dev.sse.co.uk:9022/address/address/123456701
                 note:
                 - author: Darryl Cook
                   date: '30.07.2018'
