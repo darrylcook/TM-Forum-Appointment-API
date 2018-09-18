@@ -12,7 +12,7 @@ consumes:
 produces:
   - application/json
 paths:
-  /appointment:
+  /appointmentManagement/appointment:
     post:
       tags:
         - appointment
@@ -220,7 +220,7 @@ paths:
           description: bad_request
           schema:
             $ref: '#/definitions/Error'
-  '/appointment/{appointmentId}':
+  '/appointmentManagement/appointment/{appointmentId}':
     get:
       tags:
         - appointment
@@ -244,49 +244,49 @@ paths:
             $ref: '#/definitions/Appointment'
           examples:
             application/json:
-              - category: Change Meter           
-                serviceAreaId: 910007000
-                endDate: '2018-07-31T13:00:00.000Z'
-                alarm: false
-                alarmAction: 
-                creationDate: '2018-04-27T04:54:28.593Z'
-                lastUpdate: '31.07.2018'
-                startDate: '2018-07-31T08:00:00.000Z'
-                description: SM Change Mtr Dumb to Smart
-                optimisationStatus: Emailed To Customer
-                externalId: 
-                id: SO01
-                href: https://api.ccm-dev.sse.co.uk:9022/appointment/SO01
-                status: Scheduled
-                WorkRequired:
-                - workType: SM33
-                  work:
-                  - item: WORKSM0001
-                  - item: OFFRTOCUST
-                  - item: COMMSM0004
-                  - item: COMMSM0002
-                  - item: READSM0001
-                  - item: CHARSM0001
-                  - item: REMOSM0001
-                  - item: CHECSM0001
-                  - item: RESESM0001
-                  - item: INSTSM0003
-                  - item: INIHSM0001
-                relatedParty:
+              category: Change Meter           
+              serviceAreaId: 910007000
+              endDate: '2018-07-31T13:00:00.000Z'
+              alarm: false
+              alarmAction: 'SMS'
+              creationDate: '2018-04-27T04:54:28.593Z'
+              lastUpdate: '31.07.2018'
+              startDate: '2018-07-31T08:00:00.000Z'
+              description: SM Change Mtr Dumb to Smart
+              optimisationStatus: Emailed To Customer
+              externalId: 'EXT'
+              id: SO01
+              href: https://api.ccm-dev.sse.co.uk:9022/appointment/SO01
+              status: Scheduled
+              WorkRequired:
+              - workType: SM33
+                work:
+                - item: WORKSM0001
+                - item: OFFRTOCUST
+                - item: COMMSM0004
+                - item: COMMSM0002
+                - item: READSM0001
+                - item: CHARSM0001
+                - item: REMOSM0001
+                - item: CHECSM0001
+                - item: RESESM0001
+                - item: INSTSM0003
+                - item: INIHSM0001
+              relatedParty:
                 - href: https://api.ccm-dev.sse.co.uk:9022/CustomerManagement/Customer/CUST01
                   id: CUST01
                   role: Customer
                   name: Mr Proof of Concept 1
-                address:
-                - id: 123456701
-                  href: https://api.ccm-dev.sse.co.uk:9022/address/address/123456701
-                note:
-                - author: Darryl Cook
-                  date: '30.07.2018'
-                  text: This is a service order 1 note for Job 2
-                - author: Darryl Cook
-                  date: '31.07.2018'
-                  text: This is a service order 2 note for Job 2
+              address:
+                id: '123456701'
+                href: https://api.ccm-dev.sse.co.uk:9022/address/address/123456701
+              note:
+              - author: Darryl Cook
+                date: '30.07.2018'
+                text: This is a service order 1 note for Job 2
+              - author: Darryl Cook
+                date: '31.07.2018'
+                text: This is a service order 2 note for Job 2
  
         '404':
           description: not_found
@@ -373,7 +373,75 @@ paths:
           description: bad_request
           schema:
             $ref: '#/definitions/Error'
-  /freeSlot/search:
+            
+  /appointmentManagement/freeSlot/search/{jobId}:
+    get:
+      tags:
+        - freeSlot
+      operationId: search
+      summary: search 
+      description: >-
+        This operation is used to retrieve relevant free slots available to
+        book an appointment on for a given crietia.
+      deprecated: false
+      
+      parameters:
+        - name: jobId
+          in: path
+          required: true
+          type: string
+ 
+      responses:
+        '200':
+          description: Success
+          schema:
+            $ref: '#/definitions/FreeSlot'
+          examples:
+            application/json:
+              - startDate: '2018-08-01T09:00:00.000Z'           
+                endtDate: '2018-08-01T10:00:00.000Z'   
+                relatedParty:
+                - href: https://api.sse.co.uk/relatedParty/MP01
+                  id: MOP01
+                  role: MOP
+                  name: 
+              - startDate: '2018-08-01T10:00:00.000Z'           
+                endtDate: '2018-08-01T11:00:00.000Z'   
+                relatedParty:
+                - href: https://api.sse.co.uk/relatedParty/MP01
+                  id: MOP01
+                  role: MOP
+                  name: 
+              - startDate: '2018-08-01T11:00:00.000Z'           
+                endtDate: '2018-08-01T12:00:00.000Z'   
+                relatedParty:
+                - href: https://api.sse.co.uk/relatedParty/MP02
+                  id: MOP02
+                  role: MOP
+                  name: 
+              - startDate: '2018-08-01T12:00:00.000Z'           
+                endtDate: '2018-08-01T13:00:00.000Z'   
+                relatedParty:
+                - href: https://api.sse.co.uk/relatedParty/MP02
+                  id: MOP02
+                  role: MOP
+                  name: 
+              - startDate: '2018-08-01T13:00:00.000Z'           
+                endtDate: '2018-08-01T14:00:00.000Z'   
+                relatedParty:
+                - href: https://api.sse.co.uk/relatedParty/MP03
+                  id: MOP03
+                  role: MOP
+                  name: 
+              - startDate: '2018-08-01T14:00:00.000Z'           
+                endtDate: '2018-08-01T15:00:00.000Z'   
+                relatedParty:
+                - href: https://api.sse.co.uk/relatedParty/MP01
+                  id: MOP01
+                  role: MOP
+                  name: 
+ 
+  /appointmentManagement/freeSlot/search:
     post:
       tags:
         - freeSlot
@@ -398,7 +466,7 @@ paths:
             $ref: '#/definitions/FreeSlot'
           examples:
             application/json:
-              - startDate: '2018-08-01T09:00:00.000Z'           
+              - startDate: '2088-08-01T09:00:00.000Z'           
                 endtDate: '2018-08-01T10:00:00.000Z'   
                 relatedParty:
                 - href: https://api.sse.co.uk/relatedParty/MP01
