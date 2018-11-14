@@ -357,6 +357,7 @@ paths:
           description: Success
           schema:
             $ref: '#/definitions/Appointment'
+            
   '/appointment/{appointmentId}/schedule':
     post:
       tags:
@@ -436,49 +437,35 @@ paths:
             $ref: '#/definitions/FreeSlot'
           examples:
             application/json:
-              - startDate: '2018-08-01T09:00:00.000Z'           
-                endtDate: '2018-08-01T10:00:00.000Z'   
+              - startDate: '2018-08-01 09:00:00'           
+                endtDate: '2018-08-01 10:00:00'   
                 relatedParty:
                 - href: https://api.sse.co.uk/relatedParty/MP01
                   id: MOP01
                   role: MOP
                   name: 
-              - startDate: '2018-08-01T10:00:00.000Z'           
-                endtDate: '2018-08-01T11:00:00.000Z'   
+              - startDate: '2018-08-01 10:00:00'           
+                endtDate: '2018-08-01 11:00:00'   
                 relatedParty:
                 - href: https://api.sse.co.uk/relatedParty/MP01
                   id: MOP01
                   role: MOP
                   name: 
-              - startDate: '2018-08-01T11:00:00.000Z'           
-                endtDate: '2018-08-01T12:00:00.000Z'   
+              - startDate: '2018-08-01 11:00:00'           
+                endtDate: '2018-08-01 12:00:00'   
                 relatedParty:
                 - href: https://api.sse.co.uk/relatedParty/MP02
                   id: MOP02
                   role: MOP
                   name: 
-              - startDate: '2018-08-01T12:00:00.000Z'           
-                endtDate: '2018-08-01T13:00:00.000Z'   
+              - startDate: '2018-08-01 12:00:00'           
+                endtDate: '2018-08-01 13:00:00'   
                 relatedParty:
                 - href: https://api.sse.co.uk/relatedParty/MP02
                   id: MOP02
                   role: MOP
                   name: 
-              - startDate: '2018-08-01T13:00:00.000Z'           
-                endtDate: '2018-08-01T14:00:00.000Z'   
-                relatedParty:
-                - href: https://api.sse.co.uk/relatedParty/MP03
-                  id: MOP03
-                  role: MOP
-                  name: 
-              - startDate: '2018-08-01T14:00:00.000Z'           
-                endtDate: '2018-08-01T15:00:00.000Z'   
-                relatedParty:
-                - href: https://api.sse.co.uk/relatedParty/MP01
-                  id: MOP01
-                  role: MOP
-                  name: 
- 
+              
   /appointmentManagement/freeSlot/search:
     post:
       tags:
@@ -496,7 +483,6 @@ paths:
           description: ''
           schema:
             $ref: '#/definitions/Schedule'
- 
       responses:
         '200':
           description: Success
@@ -504,49 +490,43 @@ paths:
             $ref: '#/definitions/FreeSlot'
           examples:
             application/json:
-              - startDate: '2088-08-01T09:00:00.000Z'           
-                endtDate: '2018-08-01T10:00:00.000Z'   
+              - startDate: '2018-11-15 08:00:00'           
+                endtDate: '2018-11-15 20:00:00'   
                 relatedParty:
                 - href: https://api.sse.co.uk/relatedParty/MP01
                   id: MOP01
                   role: MOP
-                  name: 
-              - startDate: '2018-08-01T10:00:00.000Z'           
-                endtDate: '2018-08-01T11:00:00.000Z'   
+                  name: mop1
+              - startDate: '2018-11-16 08:00:00'           
+                endtDate: '2018-11-16 20:00:00'   
                 relatedParty:
                 - href: https://api.sse.co.uk/relatedParty/MP01
                   id: MOP01
                   role: MOP
-                  name: 
-              - startDate: '2018-08-01T11:00:00.000Z'           
-                endtDate: '2018-08-01T12:00:00.000Z'   
+                  name: mOP2
+              - startDate: '2018-11-17 08:00:00'           
+                endtDate: '2018-11-17 20:00:00'   
                 relatedParty:
                 - href: https://api.sse.co.uk/relatedParty/MP02
                   id: MOP02
                   role: MOP
-                  name: 
-              - startDate: '2018-08-01T12:00:00.000Z'           
-                endtDate: '2018-08-01T13:00:00.000Z'   
+                  name: Mop3
+              - startDate: '2018-11-18 08:00:00'           
+                endtDate: '2018-11-18 20:00:00'   
                 relatedParty:
                 - href: https://api.sse.co.uk/relatedParty/MP02
                   id: MOP02
                   role: MOP
-                  name: 
-              - startDate: '2018-08-01T13:00:00.000Z'           
-                endtDate: '2018-08-01T14:00:00.000Z'   
+                  name: Mop4
+              - startDate: '2018-12-18 08:00:00'           
+                endtDate: '2018-12-18 20:00:00'   
                 relatedParty:
-                - href: https://api.sse.co.uk/relatedParty/MP03
-                  id: MOP03
+                - href: https://api.sse.co.uk/relatedParty/MP02
+                  id: MOP02
                   role: MOP
-                  name: 
-              - startDate: '2018-08-01T14:00:00.000Z'           
-                endtDate: '2018-08-01T15:00:00.000Z'   
-                relatedParty:
-                - href: https://api.sse.co.uk/relatedParty/MP01
-                  id: MOP01
-                  role: MOP
-                  name: 
- 
+                  name: Mop4
+
+              
  
 definitions:
   Appointment:
